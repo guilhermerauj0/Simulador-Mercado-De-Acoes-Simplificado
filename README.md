@@ -1,0 +1,1 @@
+# Simulador-Mercado-De-Acoes-Simplificado
