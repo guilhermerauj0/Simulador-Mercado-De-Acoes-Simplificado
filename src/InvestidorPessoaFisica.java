@@ -7,6 +7,6 @@ public class InvestidorPessoaFisica implements Investidor {
 
     @Override
     public void atualizar(String codigoAcao, double novoPreco) {
-        System.out.println("Notificacao para "+ nome + ":\nA acao " + codigoAcao + "teve se precco alterado para R$"+ novoPreco);
+        System.out.println("Notificacao para "+ nome + ":\nA acao " + codigoAcao + " teve se precco alterado para R$"+ novoPreco);
     }
 }
