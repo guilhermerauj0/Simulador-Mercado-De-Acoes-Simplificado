@@ -9,11 +9,11 @@ public class MercadoFinanceiro {
         InvestidorPessoaFisica investidor4 = new InvestidorPessoaFisica("Investidor 4");
         InvestidorPessoaFisica investidor5 = new InvestidorPessoaFisica("Investidor 5");
 
-        acao1.adicionarInestidor(investidor1);
-        acao1.adicionarInestidor(investidor2);
-        acao2.adicionarInestidor(investidor3);
-        acao2.adicionarInestidor(investidor4);
-        acao2.adicionarInestidor(investidor5);
+        acao1.adicionarInvestidor(investidor1);
+        acao1.adicionarInvestidor(investidor2);
+        acao2.adicionarInvestidor(investidor3);
+        acao2.adicionarInvestidor(investidor4);
+        acao2.adicionarInvestidor(investidor5);
 
         acao1.setPreco(20.34);
     }

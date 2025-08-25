@@ -11,7 +11,7 @@ public class Acao {
         investidores = new ArrayList<>();
     }
 
-    public void adicionarInestidor(Investidor investidor) {
+    public void adicionarInvestidor(Investidor investidor) {
         investidores.add(investidor);
     }
 
