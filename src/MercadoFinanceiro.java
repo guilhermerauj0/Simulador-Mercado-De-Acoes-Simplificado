@@ -16,5 +16,6 @@ public class MercadoFinanceiro {
         acao2.adicionarInvestidor(investidor5);
 
         acao1.setPreco(20.34);
+        acao2.setPreco(89.90);
     }
 }
