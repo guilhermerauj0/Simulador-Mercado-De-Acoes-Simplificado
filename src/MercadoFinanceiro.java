@@ -3,19 +3,24 @@ public class MercadoFinanceiro {
         Acao acao1 = new Acao("PETR4", 32.09);
         Acao acao2 = new Acao("VALE3", 29.09);
 
-        InvestidorPessoaFisica investidor1 = new InvestidorPessoaFisica("Investidor 1");
-        InvestidorPessoaFisica investidor2 = new InvestidorPessoaFisica("Investidor 2");
-        InvestidorPessoaFisica investidor3 = new InvestidorPessoaFisica("Investidor 3");
-        InvestidorPessoaFisica investidor4 = new InvestidorPessoaFisica("Investidor 4");
-        InvestidorPessoaFisica investidor5 = new InvestidorPessoaFisica("Investidor 5");
+        Investidor investidorJoao = new InvestidorPessoaFisica("João Silva");
+        Investidor investidoraMaria = new InvestidorPessoaFisica("Maria Souza");
+        Investidor investidorCarlos = new InvestidorPessoaFisica("Carlos Andrade");
 
-        acao1.adicionarInvestidor(investidor1);
-        acao1.adicionarInvestidor(investidor2);
-        acao2.adicionarInvestidor(investidor3);
-        acao2.adicionarInvestidor(investidor4);
-        acao2.adicionarInvestidor(investidor5);
+        Corretora xpInvest = new Corretora("XP Invest");
+
+        System.out.println(">>> Início da simulação com Corretora Intermediária.");
+        System.out.println("--- Fase de Registro de Interesses ---");
+
+        xpInvest.registrarCliente(investidorJoao, acao1);
+
+        xpInvest.registrarCliente(investidoraMaria, acao1);
+        xpInvest.registrarCliente(investidoraMaria, acao2);
+
+        System.out.println("\n--- Fim da Fase de Registro ---\n");
 
         acao1.setPreco(20.34);
         acao2.setPreco(89.90);
+        System.out.println("\n>>> Fim da simulação.");
     }
 }
