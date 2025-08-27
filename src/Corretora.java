@@ -25,6 +25,21 @@ public class Corretora implements Investidor {
 
     }
 
+    public void removerCliente(Investidor cliente, Acao acao) {
+        String codigoAcao = acao.getCodigo();
+        if(clientesPorAcao.containsKey(codigoAcao)){
+            clientesPorAcao.get(codigoAcao).remove(cliente);
+            System.out.println(String.format("[Corretora %s]: Cliente removido das atualizacoes de %s\n]", this.nome, codigoAcao));
+
+            // Se não houver mais clientes interessados, a corretora pode parar de seguir a ação
+            if(clientesPorAcao.get(codigoAcao).isEmpty()){
+                acao.removerInvestidor(this);
+                clientesPorAcao.remove(codigoAcao);
+                System.out.println(String.format("[Corretora %s]: ninguem mais esta interessado em %s. Deixando de monitorar.\n", this.nome, codigoAcao));
+            }
+        }
+    }
+
     @Override
     public void atualizar(String codigoAcao, double novoPreco) {
         System.out.println(String.format("\n[Corretora %s]: ALERTA! Mudanca de preco em %s. Notificando clientes...\n", this.nome, codigoAcao));
